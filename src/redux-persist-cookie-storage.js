@@ -75,7 +75,7 @@ CookieStorage.prototype.getAllKeys = function (callback) {
 
   var result = [];
   if (cookie) {
-    result = JSON.parse(cookie);
+    result = JSON.parse(decodeURIComponent(cookie));
   }
 
   callback(null, result);
