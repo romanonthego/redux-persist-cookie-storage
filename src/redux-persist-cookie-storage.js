@@ -25,7 +25,9 @@ function CookieStorage(options) {
 }
 
 CookieStorage.prototype.getItem = function (key, callback) {
-  callback(null, this.cookies.get(this.keyPrefix + key) || 'null');
+  var coockie = this.cookies.get(this.keyPrefix + key) || null;
+  
+  callback(null, decodeURIComponent(cookie);
 }
 
 CookieStorage.prototype.setItem = function (key, value, callback) {
