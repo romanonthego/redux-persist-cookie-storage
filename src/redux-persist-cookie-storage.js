@@ -16,7 +16,7 @@ function CookieStorage(options) {
   } else if (typeof window !== 'undefined') {
     this.cookies = Cookies;
   } else if (options.cookies) {
-    if ('get' in options.cookies && 'set' in options.cookies && 'expire' in options.cookies) {
+    if ('get' in options.cookies && 'set' in options.cookies) {
       this.cookies = options.cookies
     } else {
       this.cookies = new FakeCookieJar(options.cookies);
